@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span >Blog Spot</span>
+  <div class="class-spacer"></div>
+  <button mat-button *ngIf="!signedIn" (click)="signUp()"  (click)="openDialog()">Sign Up</button>
+  <button mat-button *ngIf="!signedIn" (click)="signIn()" (click)="openSignInDialog()">Sign In</button>
+  
+   <span><mat-icon>menu</mat-icon><mat-select [(value)]="selected" color="accent" *ngIf="signedIn">
+        <mat-option routerLink="/home" value="logout" (click)="logOut()">Logout</mat-option>
+        <mat-option value="profile" >Profile</mat-option>
+      </mat-select></span>
+ 
+    <!-- <span><mat-select [(value)]="selected" color="accent" >
+        <mat-option value="logout" (click)="logOut()">Logout</mat-option>
+        <mat-option value="profile" >Profile</mat-option>
+      </mat-select></span> -->
+</mat-toolbar>

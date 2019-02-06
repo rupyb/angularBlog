@@ -1,0 +1,12 @@
+.class-spacer {
+  flex-grow: 1;
+}
+
+mat-select {
+  color: green;
+  font-size: 14px;
+}
+
+mat-option {
+  color: purple;
+}

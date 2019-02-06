@@ -1,0 +1,21 @@
+.card {
+    max-width: 400px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+mat-card-header,
+mat-card-content, 
+mat-card-actions {
+    justify-content: center;
+    display: flex;
+}
+
+.comments {
+    max-width: 250px;
+    margin-left: 50px;
+    font-size: .08em;
+}
+
+.name {
+    font-style: italic;
+}

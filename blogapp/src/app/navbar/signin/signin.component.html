@@ -1,0 +1,17 @@
+<form [formGroup]="profileForm" >
+    <h3>{{error}}</h3>
+  
+    <label>
+        Email:
+        <input type="text" formControlName="email" required>
+      </label>
+    
+      <label>
+          Please enter a password:
+          <input type="text" formControlName="password">
+        </label>
+  
+    <button mat-button type="submit" [disabled]="!profileForm.valid" 
+    [mat-dialog-close]="profileForm.value">Submit</button>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+  </form>
