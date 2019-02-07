@@ -30,4 +30,7 @@ export class NewBlogComponent implements OnInit {
 
     this.blogService.post(newPost).subscribe();
 }
+onNoClick(): void {
+
+}
 }
