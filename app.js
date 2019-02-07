@@ -117,7 +117,8 @@ app.post('/blog', (req, res, next) => {
 });
 
 app.get('*', function(req, res) {
-    res.sendfile(path.join(__dirname, 'dist/blogapp/index.html'));
+    const index = path.join(__dirname, 'dist', 'blogapp', 'index.html');
+    res.sendfile(index);
 });
 
 // catch 404 and forward to error handler
