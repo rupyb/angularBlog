@@ -7,11 +7,11 @@ import { AuthGuard } from './auth/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
-  {path:'', component: BlogComponent, pathMatch: 'full'},
-  {path:'home', component: BlogComponent, pathMatch: 'full'},
-  {path:'profile', component: ProfileComponent, pathMatch: 'full'},
+  {path: '', component: BlogComponent, pathMatch: 'full'},
+  {path: 'home', component: BlogComponent, pathMatch: 'full'},
+  {path: 'profile', component: ProfileComponent, pathMatch: 'full'},
   {
-    path:'newblog', 
+    path: 'newblog',
     component: NewBlogComponent,
     canActivate: [AuthGuard],
   }
