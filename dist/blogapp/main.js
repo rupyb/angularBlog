@@ -883,10 +883,10 @@ var BlogserviceService = /** @class */ (function () {
         this.httpClient = httpClient;
     }
     BlogserviceService.prototype.get = function () {
-        return this.httpClient.get('http://localhost:8080/blog');
+        return this.httpClient.get('/blog');
     };
     BlogserviceService.prototype.post = function (blog) {
-        return this.httpClient.post('http://localhost:8080/blog', blog);
+        return this.httpClient.post('/blog', blog);
     };
     BlogserviceService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -922,16 +922,16 @@ var ServerService = /** @class */ (function () {
         this.httpClient = httpClient;
     }
     ServerService.prototype.get = function () {
-        return this.httpClient.get('http://localhost:8080/stuff');
+        return this.httpClient.get('/stuff');
     };
     ServerService.prototype.post = function (signUpData) {
         // const headers = new HttpHeaders()
         //       .set('Authorization', 'my-auth-token')
         //       .set('Content-Type', 'application/json');
-        return this.httpClient.post('http://localhost:8080/stuff', signUpData);
+        return this.httpClient.post('/stuff', signUpData);
     };
     ServerService.prototype.postSignIn = function (signInData) {
-        this.currentUser = this.httpClient.post('http://localhost:8080/signIn', signInData);
+        this.currentUser = this.httpClient.post('/signIn', signInData);
         return this.currentUser;
     };
     ServerService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

@@ -10,7 +10,15 @@ var usersRouter = require('./routes/users');
 var mongoose = require('mongoose');
 let validator = require('validator');
 
-mongoose.connect('mongodb://test:test123@ds237574.mlab.com:37574/linkedinapis', { useNewUrlParser: true });
+mongoose.connect('mongodb://test:test123@ds237574.mlab.com:37574/linkedinapis',
+    { server: { 
+    // sets how many times to try reconnecting
+        reconnectTries: Number.MAX_VALUE,
+        // sets the delay between every retry (milliseconds)
+        reconnectInterval: 1000 
+    } 
+    }, 
+    { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

@@ -9,10 +9,10 @@ export class BlogserviceService {
   constructor(private httpClient: HttpClient) { }
 
   get() {
-      return this.httpClient.get<any>('http://localhost:8080/blog');
+      return this.httpClient.get<any>('/blog');
   }
 
   post(blog) {
-    return this.httpClient.post<any>('http://localhost:8080/blog', blog);
+    return this.httpClient.post<any>('/blog', blog);
   }
 }
