@@ -68,6 +68,9 @@ app.use(express.static(path.join(__dirname, 'dist/blogapp')));
 
 // app.use('/', indexRouter);
 // app.use('/users', usersRouter);
+app.get('/', (req, res, next) => {
+    res.sendFile(path.join(__dirname, 'dist/blogapp'));
+});
 app.get('/stuff', (req, res, next) => {
     res.json('success');
 });
